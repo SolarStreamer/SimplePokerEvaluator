@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Poker App</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    #loading-screen {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: #222;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2em;
+      z-index: 9999;
+    }
+
+    #homepage {
+      display: none;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="loading-screen">Loading Poker App...</div>
+
+  <div id="homepage">
+    <h1>Welcome to the Poker Hand Evaluator</h1>
+    <p>Click below to start evaluating your hand.</p>
+    <button onclick="alert('Poker evaluator coming soon!')">Start</button>
+  </div>
+
+  <script>
+    // Simulate loading delay
+    window.onload = function () {
+      setTimeout(() => {
+        document.getElementById('loading-screen').style.display = 'none';
+        document.getElementById('homepage').style.display = 'block';
+        document.body.style.overflow = 'auto';
+      }, 2000); // 2 seconds delay
+    };
+  </script>
+</body>
+</html>
